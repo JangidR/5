@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+
+bool isNumeric(std::string str) {
+    for (char ch : str) {
+        if (!isdigit(ch)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    std::cout << isNumeric("12345") << std::endl;
+    return 0;
+}
